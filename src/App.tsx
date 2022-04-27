@@ -11,8 +11,14 @@ function App() {
   };
   return (
     <div className="app">
-      <Images images={images} handleRemove={handleRemove} />
+      {images.length > 0 && (
+        <button className="clear-btn" onClick={() => setImages([])}>
+          Clear
+        </button>
+      )}
+
       <Uploader setImages={setImages} images={images} />
+      <Images images={images} handleRemove={handleRemove} />
     </div>
   );
 }

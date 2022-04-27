@@ -20,11 +20,12 @@ const Uploader = ({
         }
       };
     });
+    e.target.value = "";
   };
   return (
     <div>
       <label htmlFor="file-upload" className="label">
-        <span>Custom Upload</span>
+        <span>Upload some images!</span>
         <img
           src="https://www.pngplay.com/wp-content/uploads/8/Upload-Icon-Image-Background-PNG-Image.png"
           alt="upload"

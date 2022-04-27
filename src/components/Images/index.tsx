@@ -1,3 +1,4 @@
+import { v4 as uuid } from "uuid";
 const Images = ({
   images,
   handleRemove,
@@ -7,8 +8,8 @@ const Images = ({
 }) => {
   return (
     <div className="image-container">
-      {images.map((file: string, i) => (
-        <div key={file}>
+      {images.map((file: string) => (
+        <div key={uuid()}>
           <span className="image-overlay" onClick={() => handleRemove(file)}>
             <img
               src="https://iconarchive.com/download/i58687/dakirby309/windows-8-metro/Folders-OS-Recycle-Bin-Full-Metro.ico"
