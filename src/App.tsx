@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="app">
       <Images images={images} />
-      <Uploader setImages={setImages} />
+      <Uploader setImages={setImages} images={images} />
     </div>
   );
 }

@@ -2,12 +2,14 @@ import { SetStateAction } from "react";
 
 const Uploader = ({
   setImages,
+  images,
 }: {
   setImages: React.Dispatch<SetStateAction<string[]>>;
+  images: string[];
 }) => {
   const imageHandler = (e: any) => {
     const fileArray = Object.values(e.target.files);
-    const imageArr: any = [];
+    const imageArr: any = [...images];
     fileArray.forEach((file: any) => {
       const reader = new FileReader();
       reader.readAsDataURL(file);
